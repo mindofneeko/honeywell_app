@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var sql = require('mssql/msnodesqlv8');
 var config = {
-  connectionString: 'Driver=SQL Server;Server=MINDOFNEEKOPC\\SQLEXPRESS;Database=confidence_pool;Trusted_Connection=true;'
+  connectionString: 'Driver=SQL Server;Server={config.server}\\SQLEXPRESS;Database={config.test_table};Trusted_Connection=true;'
 };
 
 app.get("/url", (req, res, next) => {
