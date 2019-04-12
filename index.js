@@ -13,7 +13,6 @@ app.get("/url", (req, res, next) => {
    
     sql.connect(config, err => {
         new sql.Request().query('SELECT * from nfl_teams', (err, result) => {
-          //console.log(".:The Good Place:.");
           if(err) { // SQL error, but connection OK.
             console.log(" SQL Error: "+ err);
           } else { // All is rosey in your garden.
